@@ -26,8 +26,8 @@ class TrainSeeder extends Seeder
             $train->time_arrive = $faker->time('H:i', 'now');
             $train->code_train = $faker->bothify('?###??');
             $train->n_carrozze = $faker->randomDigitNotNull();
-            $train->in_time = $faker->randomElements([false, true]);
-            $train->_deleted = $faker->randomElements([false, true]);
+            $train->in_time = $faker->randomElement([false, true]);
+            $train->deleted = $faker->randomElement([false, true]);
             $train->save();
         }
     }
