@@ -23,8 +23,8 @@ return new class extends Migration
             $table->dateTime('time_arrive');
             $table->string('code_train', 10);
             $table->tinyInteger('n_carrozze');
-            $table->boolean('in_time');
-            $table->boolean('deleted');
+            $table->boolean('in_time')->default(1);
+            $table->boolean('deleted')->default(0);
         });
     }
 
